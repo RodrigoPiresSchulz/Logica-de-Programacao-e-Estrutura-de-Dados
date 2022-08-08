@@ -1,0 +1,19 @@
+import math
+
+NumeroLado = int(input("Informe o número de lados do polígono: "))
+MedidaLado = float(input("Informe a medida do lado do polígono: "))
+
+
+if(NumeroLado == 3):
+	# Area do triângulo - 1º calcular a área via teorema de pitágoras
+	#					- 2º usar a altura e a medida do lado na fórmula da área
+	Altura = math.sqrt(MedidaLado**2 - (MedidaLado/2)**2)
+	Area = MedidaLado * Altura / 2
+	print("Área do triângulo: ", Area)
+if(NumeroLado == 4):
+	Area = MedidaLado * MedidaLado
+	print("Área do quadrado: ", Area)
+if (NumeroLado == 5):
+	Apotema = (MedidaLado / 2) / math.tan(36)
+	Area = 5 * MedidaLado * Apotema
+	print("Área do pentagono: ", Area)
