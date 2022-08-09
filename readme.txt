@@ -1,3 +1,3 @@
-# Algoritmo Tarefa 015 Complemento ao Polígono da tarefa 14 (IF)
+# Tarefas Disciplina Introdução à Programação - StackX
 # Dev: Rodrigo Schulz
-# Data: 29.06.2022
+# Data: Junho/2022
