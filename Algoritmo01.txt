@@ -1,0 +1,8 @@
+# Algoritmo 001: primitivos e identificadores
+# Dev: Rodrigo Schulz
+# Data: 26.06.2022
+
+a = 1
+A = 2
+print (a,A)
+print (a + A)
