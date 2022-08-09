@@ -1,0 +1,140 @@
+# Algoritmo Tarefa 024 Estruturas condicionais e de repetição: Preço de produtos
+# Dev: Rodrigo Schulz
+# Data: 30.06.2022
+"""
+Faça um programa que receba o preço
+
+categoria (1 – limpeza; 2 – alimentação; ou 3 – vestuário)
+
+situação (R – produtos que necessitam de refrigeração
+N – produtos que não necessitam de refrigeração).
+
+Calcule e mostre:
+
+O valor do aumento, usando as regras que se seguem.
+Preço <= 25
+categoria 1 - % aumento 5%
+categoria 2 - % aumento 8%
+categoria 3 - % aumento 10%
+
+Preço > 25
+categoria 1 - % aumento 12%
+categoria 2 - % aumento 15%
+categoria 3 - % aumento 18%
+
+O valor do imposto, usando as regras a seguir.
+Categoria: 2 OU Situação: R - imposto 5% do preço
+caso contrário, pagará imposto do preço
+
+
+O novo preço = preço mais + aumento - menos imposto.
+A classificação, usando as regras a seguir
+<= 50 - barato
+> 50 e < 120 normal
+>= 120 caro
+
+
+"""
+print("-- Programa preço de produtos --\n")
+Preco = float(input("Informe o preço do produto: "))
+Categoria = int(input("Informe a categoria -> 1 – limpeza; 2 – alimentação; 3 – vestuário: "))
+Situacao = str(input("Indique a situação -> R – produtos que necessitam de refrigeração / N – produtos que não necessitam de refrigeração: "))
+
+if Preco <= 25:
+    if Categoria == 1 and Situacao == "N":
+        PrecoAumento = Preco + (Preco * 0.05)
+        NovoPreco = PrecoAumento - (PrecoAumento * 0.08)
+            #Para faixa de preço menor ou igual a 25 não vou tratar a
+            #tabela de classificação pois o valor o novo preço nunca vai passar R$ 50,00
+        print("A categoria do produto é: limpeza\n"
+            "O produto não precisa de refrigeração\n"
+            "Preço com aumento: ",PrecoAumento,"\n"
+            "Novo preço após imposto: ", NovoPreco,"\n"
+            "O preço é considerado: barato")
+
+    if Categoria == 2 or Situacao == "R":
+        PrecoAumento = Preco + (Preco * 0.08)
+        NovoPreco = PrecoAumento - (PrecoAumento * 0.05)
+            #Para faixa de preço menor ou igual a 25 não vou tratar a
+            #tabela de classificação pois o valor o novo preço nunca vai passar R$ 50,00
+        print("A categoria do produto é: alimentação\n"
+            "O produto precisa de refrigeração\n"
+            "Preço com aumento: ",PrecoAumento,"\n"
+            "Novo preço após imposto: ", NovoPreco,"\n"
+            "O preço é considerado: barato")
+
+    if Categoria == 3 and Situacao == "N":
+        PrecoAumento = Preco + (Preco * 0.10)
+        NovoPreco = PrecoAumento - (PrecoAumento * 0.08)
+            #Para faixa de preço menor ou igual a 25 não vou tratar a
+            #tabela de classificação pois o valor o novo preço nunca vai passar R$ 50,00
+        print("A categoria do produto é: vestuário\n"
+            "O produto não precisa de refrigeração\n"
+            "Preço com aumento: ",PrecoAumento,"\n"
+            "Novo preço após imposto: ", NovoPreco,"\n"
+            "O preço é considerado: barato")
+
+if Preco > 25:
+    if Categoria == 1 and Situacao == "N":
+        PrecoAumento = Preco + (Preco * 0.12)
+        NovoPreco = PrecoAumento - (PrecoAumento * 0.08)
+        if NovoPreco <= 50:
+            print("A categoria do produto é: limpeza\n"
+                "O produto não precisa de refrigeração\n"
+                "Preço com aumento: ",PrecoAumento,"\n"
+                "Novo preço após imposto: ", NovoPreco,"\n"
+                "O preço é considerado: barato")
+        if NovoPreco > 50 and NovoPreco <= 120:
+            print ("A categoria do produto é: limpeza\n"
+                  "O produto não precisa de refrigeração\n"
+                  "Preço com aumento: ",PrecoAumento,"\n"
+                  "Novo preço após imposto: ", NovoPreco,"\n"
+                  "O preço é considerado: normal")
+        else:
+            print("A categoria do produto é: limpeza\n"
+                "O produto não precisa de refrigeração\n"
+                "Preço com aumento: ", PrecoAumento, "\n"
+                "Novo preço após imposto: ", NovoPreco, "\n"
+                "O preço é considerado: caro")
+    if Categoria == 2 or Situacao == "R":
+        PrecoAumento = Preco + (Preco * 0.15)
+        NovoPreco = PrecoAumento - (PrecoAumento * 0.05)
+        if NovoPreco <= 50:
+            print("A categoria do produto é: alimentação\n"
+                "O produto precisa de refrigeração\n"
+                "Preço com aumento: ",PrecoAumento,"\n"
+                "Novo preço após imposto: ", NovoPreco,"\n"
+                "O preço é considerado: barato")
+        if NovoPreco > 50 and NovoPreco <= 120:
+            print ("A categoria do produto é: alimentação\n"
+                  "O produto precisa de refrigeração\n"
+                  "Preço com aumento: ",PrecoAumento,"\n"
+                  "Novo preço após imposto: ", NovoPreco,"\n"
+                  "O preço é considerado: normal")
+        else:
+            print("A categoria do produto é: alimentação\n"
+                "O produto precisa de refrigeração\n"
+                "Preço com aumento: ", PrecoAumento, "\n"
+                "Novo preço após imposto: ", NovoPreco, "\n"
+                "O preço é considerado: caro")
+    if Categoria == 3 and Situacao == "N":
+        PrecoAumento = Preco + (Preco * 0.18)
+        NovoPreco = PrecoAumento - (PrecoAumento * 0.08)
+        if NovoPreco <= 50:
+            print("A categoria do produto é: alimentação\n"
+                "O produto não precisa de vestuário\n"
+                "Preço com aumento: ",PrecoAumento,"\n"
+                "Novo preço após imposto: ", NovoPreco,"\n"
+                "O preço é considerado: barato")
+        if NovoPreco > 50 and NovoPreco <= 120:
+            print ("A categoria do produto é: vestuário\n"
+                  "O produto não precisa de refrigeração\n"
+                  "Preço com aumento: ",PrecoAumento,"\n"
+                  "Novo preço após imposto: ", NovoPreco,"\n"
+                  "O preço é considerado: normal")
+        else:
+            print("A categoria do produto é: vestuário\n"
+                "O produto não precisa de refrigeração\n"
+                "Preço com aumento: ", PrecoAumento, "\n"
+                "Novo preço após imposto: ", NovoPreco, "\n"
+                "O preço é considerado: caro")

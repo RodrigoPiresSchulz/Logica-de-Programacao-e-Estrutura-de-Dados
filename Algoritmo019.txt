@@ -1,0 +1,14 @@
+# Algoritmo Tarefa 019 Três valores e o maior deles (IF)
+# Dev: Rodrigo Schulz
+# Data: 29.06.2022
+
+a = int(input("Informe um valor para a: "))
+b = int(input("Informe um valor para b: "))
+c = int(input("Informe um valor para c: "))
+
+if (a > b and a > c):
+	print("O maior valor é: ",a)
+if (b > a and b > c):
+	print("O maior valor é: ",b)
+if (c > a and c > b):
+	print("O maior valor é:",c)

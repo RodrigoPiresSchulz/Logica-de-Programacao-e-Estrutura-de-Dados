@@ -1,0 +1,16 @@
+# Algoritmo Tarefa 020 Triângulo (IF)
+# Dev: Rodrigo Schulz
+# Data: 29.06.2022
+
+print("-- Programa classificação triângulo --\n")
+print("Informe as medidas dos lados do triângulo: ")
+L1 = int(input("Lado 01: "))
+L2 = int(input("Lado 02: "))
+L3 = int(input("Lado 03: "))
+
+if L1 == L2 and L1 == L3 and L2 == L3:
+	print("O triângulo é equilátero")
+if ( L1 == L2 and L1 != L3 and L2 != L3 ) or (L2 == L3 and L2 != L1 and L3 != L1 ) or (L1 == L3 and L1 != L2 and L3 != L2 ):
+	print("O triângulo é isóceles")
+if (L1 != L2 and L1 != L3 and L2 != L3) or (L1 != L2 and L1 != L3 and L2 != L3) or (L1 != L2 and L1 != L3 and L2 != L3):
+	print( "O triângulo é escaleno" )

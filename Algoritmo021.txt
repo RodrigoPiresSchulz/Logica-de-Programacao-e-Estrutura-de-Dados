@@ -1,0 +1,25 @@
+# Algoritmo Tarefa 021 Angulos do Triângulo (IF)
+# Dev: Rodrigo Schulz
+# Data: 29.06.2022
+
+print("-- Programa classificação triângulo - ângulos --\n")
+print("Informe as medidas dos ângulos do triângulo: ")
+A1 = int(input("Ângulo 01: "))
+A2 = int(input("Ângulo 02: "))
+A3 = int(input("Ângulo 03: "))
+
+while A1 + A2 + A3 != 180:
+	print("Ângulos inválidos, digite novamente: ")
+	A1 = int(input("Ângulo 01: "))
+	A2 = int(input("Ângulo 02: "))
+	A3 = int(input("Ângulo 03: "))
+
+if A1 == 90 or A2 == 90 or A3 == 90:
+		print("O Triângulo é Retângulo")
+if A1 > 90 or A2 > 90 or A3 > 90:
+		print("O Triângulo é Obtusângulo")
+if A1 < 90 and A2 < 90 and A3 < 90:
+		print("O Triângulo é Acutângulo")
+
+
+
