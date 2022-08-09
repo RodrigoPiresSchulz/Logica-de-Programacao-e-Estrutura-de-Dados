@@ -1,0 +1,11 @@
+# Algoritmo Tarefa 011. Número maior (IF)
+# Dev: Rodrigo Schulz
+# Data: 28.06.2022
+
+a = int(input("Informe um número: "))
+b = int(input("Informe outro número: "))
+
+if a > b:
+	print("O maior número é:", a)
+else:
+	print("O maior número é:", b)

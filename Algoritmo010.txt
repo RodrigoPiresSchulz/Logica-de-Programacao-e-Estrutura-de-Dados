@@ -1,0 +1,17 @@
+# Algoritmo Tarefa 010: Conjunto de valores (While)
+# Dev: Rodrigo Schulz
+# Data: 28.06.2022
+
+import math
+
+Valor = int(input("Informe um valor: "))
+
+if Valor > 0:
+	Quadrado = Valor * Valor
+	Cubo = Valor * Valor * Valor
+	Raiz = math.sqrt(Valor)
+	print("O quadrado de", Valor, "é: ", Quadrado)
+	print("O cubo de", Valor, "é: ", Cubo)
+	print("A raiz quadrada de", Valor, "é: ", Raiz)
+else:
+	print("Entrada de dados encerrada")
