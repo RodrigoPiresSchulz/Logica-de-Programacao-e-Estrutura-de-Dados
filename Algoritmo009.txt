@@ -1,0 +1,16 @@
+# Algoritmo Tarefa 009: Receber nomes e salários (While)
+# Dev: Rodrigo Schulz
+# Data: 28.06.2022
+
+SalCarlos = float(input("Informe o salário de Carlos: "))
+SalJoao = SalCarlos / 3
+laco = 0
+
+while SalJoao <= SalCarlos:
+	SalJoao = SalJoao + (SalJoao * 0.05)
+	SalCarlos = SalCarlos + (SalCarlos * 0.02)
+	print("Salário João: ", SalJoao)
+	print("Salário Carlos: ", SalCarlos)
+	laco = laco + 1
+
+print("Para salário João chegar ou ultrapassar Carlos : ",laco, "meses")

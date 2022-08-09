@@ -1,0 +1,25 @@
+# Algoritmo Tarefa 005: Idade e peso (IF)
+# Dev: Rodrigo Schulz
+# Data: 26.06.2022
+
+Idade = int(input("Digite a sua idade: "))
+Peso = float(input("Digite o peso: "))
+
+if Idade < 20 and Peso <= 60:
+    print("Com",Idade, "anos e no peso de",Peso,"kilos você está no grau de risco 9")
+elif Idade < 20 and Peso > 60 and Peso <= 90:
+    print("Com",Idade, "anos e no peso de",Peso,"kilos você está no grau de risco 8")
+elif Idade < 20 and Peso > 90:
+    print("Com",Idade, "anos e no peso de",Peso,"kilos você está no grau de risco 7")
+elif Idade >= 20 and Idade <= 50 and Peso <= 60:
+    print("Com",Idade, "anos e no peso de",Peso,"kilos você está no grau de risco 6")
+elif Idade >= 20 and Idade <= 50 and Peso > 60 and Peso <= 90:
+    print("Com",Idade, "anos e no peso de",Peso,"kilos você está no grau de risco 5")
+elif Idade >= 20 and Idade <= 50 and Peso > 90:
+    print("Com",Idade, "anos e no peso de",Peso,"kilos você está no grau de risco 4")
+elif Idade > 50 and Peso <= 60:
+    print("Com",Idade, "anos e no peso de",Peso,"kilos você está no grau de risco 3")
+elif Idade > 50 and Peso > 60 and Peso <= 90:
+    print("Com",Idade, "anos e no peso de",Peso,"kilos você está no grau de risco 2")
+elif Idade > 50 and Peso > 90:
+    print("Com",Idade, "anos e no peso de",Peso,"kilos você está no grau de risco 1")

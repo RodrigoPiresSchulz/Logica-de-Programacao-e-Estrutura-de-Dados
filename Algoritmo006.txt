@@ -1,0 +1,18 @@
+# Algoritmo Tarefa 006: Idade de um nadador (IF)
+# Dev: Rodrigo Schulz
+# Data: 27.06.2022
+
+Idade = int(input("Digite a sua idade: "))
+
+if Idade < 5:
+    print("Não tem uma categoria para essa idade!")
+elif Idade >= 5 and Idade <= 7 :
+    print("A categoria é: Infantil")
+elif Idade >= 9 and Idade <= 10 :
+    print("A categoria é: Juvenil")
+elif Idade >= 11 and Idade <= 15 :
+    print("A categoria é: Adolescente")
+elif Idade >= 16 and Idade <= 30 :
+    print("A categoria é: Adulto")
+else:
+    print("A categoria é: Senior")
